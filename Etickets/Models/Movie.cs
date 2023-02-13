@@ -1,6 +1,10 @@
 ﻿using Etickets.Data;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Etickets.Models
 {
@@ -27,7 +31,6 @@ namespace Etickets.Models
 
         //Cinema
         public int CinemaId { get; set; }
-
         [ForeignKey("CinemaId")]
         public Cinema Cinema { get; set; }
 
@@ -35,7 +38,7 @@ namespace Etickets.Models
         public int ProducerId { get; set; }
 
         [ForeignKey("ProducerId")]
-        public Cinema Producer { get; set; }
+        public Producer Producer { get; set; }
 
 
     }
